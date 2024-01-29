@@ -80,30 +80,30 @@ function LeftSide() {
     </div>
       {click && (
     <div className='flex flex-col  gap-5 h-screen w-full fixed top-0 left-0 justify-center items-center
-        bg-black/80 py-16'>
-            <div className='flex justify-end w-[384px]'>
-            <RxCross2 className='text-[40px] text-white cursor-pointer' onClick={()=> setClicked(false)}/>
+        bg-black/80 py-6 sm:py-16'>
+            <div className='flex justify-end w-[320px] sm:w-[384px]'>
+            <RxCross2 className='text-[35px] sm:text-[40px] text-white cursor-pointer' onClick={()=> setClicked(false)}/>
             </div>
             <div className='relative'>
             <Image 
              src={image} 
              alt='The image of the product 1'
-             className='h-[384px] w-[384px] rounded-[10px]'
+             className='w-[320px] h-[320px] sm:h-[384px] sm:w-[384px] rounded-[10px]'
              />
             <div onClick={BackImage} className='flex justify-center items-center absolute top-1/2 left-[-20px]'>
-            <FaCaretLeft className='text-2xl h-10 w-10 bg-white rounded-full cursor-pointer pr-1'/>
+            <FaCaretLeft className='text-2xl h-8 w-8 sm:h-10 sm:w-10 bg-white rounded-full cursor-pointer pr-1'/>
             </div>
             <div onClick={NextImage} className='flex justify-center items-center absolute top-1/2 right-[-20px]'>
-            <FaCaretRight className='text-2xl h-10 w-10  bg-white rounded-full cursor-pointer pl-1'/>
+            <FaCaretRight className='text-2xl h-8 w-8 sm:h-10 sm:w-10  bg-white rounded-full cursor-pointer pl-1'/>
             </div>
         </div>
 
 
 
-        <div className='h-[384px] w-[384px] flex justify-between'>
+        <div className='h-[384px] w-[320px] sm:w-[384px] flex justify-between'>
         { Product.map((value, index)=>(
          <div key={index} 
-         className='relative h-[84px] w-[84px] rounded-[6px] overflow-hidden cursor-pointer'       
+         className='relative h-[70px] w-[70px] sm:h-[84px] sm:w-[84px] rounded-[6px] overflow-hidden cursor-pointer'       
          onClick={()=>{
             setIndex(index)
             setImage(value)}}>
